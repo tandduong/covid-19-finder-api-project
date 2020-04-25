@@ -1,38 +1,78 @@
-.App {
+/*hiding the scrollbar*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+*{
+  font-family: 'Comic Neue', cursive;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.card{
+  margin-top: 100px;
+}
+
+.card-title{
+ opacity: 1;
+}
+
+.country-info{
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 685px){
+  .country-info{
+    width: 90%;
+  }
+
+  .search{
+    transform: scale(.5);
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .country-info{
+    width: 50%;
+  }
+}
+
+.search{
+  font-size: 80px;
+  margin-top: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sub-search{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input{
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer{
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   height: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon{
+  font-size: 10px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon a{
+  padding: 20px;
 }
