@@ -166,7 +166,7 @@ function App() {
 
       <div id="map" style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyCLlYUGFydCC-56n9Lv8LG6h3TkosnmE8M" }}
+          bootstrapURLKeys={{ key: "YOUR API KEY HERE" }}
           defaultCenter={{
             lat:21, lng: 105.8
           }}
