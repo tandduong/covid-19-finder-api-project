@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "26f49c30520ce10ec6b70e9b57bfe02a",
+    "revision": "3d75141565870063230778dc53601fb7",
     "url": "/covid-19-finder-api-project/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid-19-finder-api-project/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "f860b9e9fe9442c53701",
+    "revision": "278621106482b277a51e",
     "url": "/covid-19-finder-api-project/static/css/main.023fb1e0.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid-19-finder-api-project/static/js/2.194a3111.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f860b9e9fe9442c53701",
-    "url": "/covid-19-finder-api-project/static/js/main.8f5890a9.chunk.js"
+    "revision": "278621106482b277a51e",
+    "url": "/covid-19-finder-api-project/static/js/main.5d7994fa.chunk.js"
   },
   {
     "revision": "df7eea8477f2d483bff9",
