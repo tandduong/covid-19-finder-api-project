@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/covid-19-finder-api-project/static/css/main.ff47711c.chunk.css",
-    "main.js": "/covid-19-finder-api-project/static/js/main.fb788b60.chunk.js",
-    "main.js.map": "/covid-19-finder-api-project/static/js/main.fb788b60.chunk.js.map",
+    "main.css": "/covid-19-finder-api-project/static/css/main.0c20c8f1.chunk.css",
+    "main.js": "/covid-19-finder-api-project/static/js/main.6bccecc3.chunk.js",
+    "main.js.map": "/covid-19-finder-api-project/static/js/main.6bccecc3.chunk.js.map",
     "runtime-main.js": "/covid-19-finder-api-project/static/js/runtime-main.6b745c62.js",
     "runtime-main.js.map": "/covid-19-finder-api-project/static/js/runtime-main.6b745c62.js.map",
     "static/css/2.de424728.chunk.css": "/covid-19-finder-api-project/static/css/2.de424728.chunk.css",
-    "static/js/2.194a3111.chunk.js": "/covid-19-finder-api-project/static/js/2.194a3111.chunk.js",
-    "static/js/2.194a3111.chunk.js.map": "/covid-19-finder-api-project/static/js/2.194a3111.chunk.js.map",
+    "static/js/2.64df4676.chunk.js": "/covid-19-finder-api-project/static/js/2.64df4676.chunk.js",
+    "static/js/2.64df4676.chunk.js.map": "/covid-19-finder-api-project/static/js/2.64df4676.chunk.js.map",
     "index.html": "/covid-19-finder-api-project/index.html",
-    "precache-manifest.030aea8a032a751b1403b8b65dda74d7.js": "/covid-19-finder-api-project/precache-manifest.030aea8a032a751b1403b8b65dda74d7.js",
+    "precache-manifest.b4747d70c64af556e1ff56c2aac9b63a.js": "/covid-19-finder-api-project/precache-manifest.b4747d70c64af556e1ff56c2aac9b63a.js",
     "service-worker.js": "/covid-19-finder-api-project/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/covid-19-finder-api-project/static/css/2.de424728.chunk.css.map",
-    "static/css/main.ff47711c.chunk.css.map": "/covid-19-finder-api-project/static/css/main.ff47711c.chunk.css.map",
-    "static/js/2.194a3111.chunk.js.LICENSE.txt": "/covid-19-finder-api-project/static/js/2.194a3111.chunk.js.LICENSE.txt"
+    "static/css/main.0c20c8f1.chunk.css.map": "/covid-19-finder-api-project/static/css/main.0c20c8f1.chunk.css.map",
+    "static/js/2.64df4676.chunk.js.LICENSE.txt": "/covid-19-finder-api-project/static/js/2.64df4676.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6b745c62.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.194a3111.chunk.js",
-    "static/css/main.ff47711c.chunk.css",
-    "static/js/main.fb788b60.chunk.js"
+    "static/js/2.64df4676.chunk.js",
+    "static/css/main.0c20c8f1.chunk.css",
+    "static/js/main.6bccecc3.chunk.js"
   ]
 }
