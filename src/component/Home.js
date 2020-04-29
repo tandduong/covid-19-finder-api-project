@@ -4,17 +4,20 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Container from 'react-bootstrap/Container'
 import {Row, Col} from 'react-bootstrap'
-import '../src/App.css';
+import '../App.css';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import GoogleMapReact from 'google-map-react';
 import Navbar from 'react-bootstrap/Navbar';
-import {Nav, NavDropdown} from 'react-bootstrap';
+import { Nav, NavDropdown } from 'react-bootstrap';
+import Toggle from 'react-toggle';
+import About from './About';
 
-function App() {
+function Home() {
   const [latest, setLatest] = useState("");
   const [results, setResults] = useState([]);
-  const[searchforCountry, setSearchForCountry] = useState("");
+  const [searchforCountry, setSearchForCountry] = useState("");
+const [darkTheme, setDarkTheme] = useState(false);    
 
   useEffect(() => {
     axios
@@ -60,13 +63,17 @@ function App() {
       </div>
     );
   });
+    
+    const handleDarkChange = () => {
+        setDarkTheme(!darkTheme);
+    };
   
   const countriesInfected = filterCountries.map((data, index) => {
     return(
       <Card 
         key={index}
-        bg="light" 
-        text="black" 
+        bg={darkTheme? "dark" : "light"} 
+        text={darkTheme? "light" : "dark"}  
         className="text-center"
       >
         <Card.Img variant="top" src={data.countryInfo.flag} />
@@ -74,7 +81,7 @@ function App() {
           <Card.Title>{data.country}</Card.Title>
           <Card.Text>Cases {data.cases}</Card.Text>
           <Card.Text>Deaths {data.deaths}</Card.Text>
-          <Card.Text>Healed {data.recovered}</Card.Text>
+          <Card.Text>Recovered {data.recovered}</Card.Text>
           <Card.Text>Today Cases {data.todayCases}</Card.Text>
           <Card.Text>Today Deaths {data.todayDeaths}</Card.Text>
           <Card.Text>Active {data.active}</Card.Text>
@@ -84,7 +91,7 @@ function App() {
   });
 
   return (
-    <div>
+    <div id="nav" style={{backgroundColor: darkTheme ? "black" : "white", color: darkTheme ? "white" : "black"}}>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
         <Navbar.Brand href="#home">COVID-19 Tracker</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -92,7 +99,7 @@ function App() {
           <Nav className="mr-auto">
             <Nav.Link href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/news">WHO News</Nav.Link>
             <Nav.Link href="https://tandduong.github.io/new-portfolio-tan/" target="_blank">See Portfolio</Nav.Link>
-            
+            <Nav.Link href="#about">About</Nav.Link>
             <NavDropdown title="By Tan D. Duong" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#search">Search</NavDropdown.Item>
               <NavDropdown.Item href="#map">See Map</NavDropdown.Item>
@@ -100,16 +107,18 @@ function App() {
             <Nav.Link href="https://tandduong.com/contact-me/" target="_blank">Contact In My Official Website</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+          </Navbar>
+          
+          
 
-    <CardDeck className="carddeck">
+    <CardDeck style={{color: darkTheme ? "black" : "black"}} className="carddeck">
       <Container>
         <Row>
-          <Col xs={4} md={4}>
+          <Col >
         <Card border="warning" text="black" className="text-center card card-1">
           <Card.Body>
             <div className="card-title"><Card.Title>Cases </Card.Title></div>
-            <Card.Text>
+            <Card.Text >
               {latest.cases}
             </Card.Text>
           </Card.Body>
@@ -119,7 +128,7 @@ function App() {
         </Card>
         </Col>
 
-        <Col xs={4} md={4}>
+        <Col >
         <Card border="danger" text="black" className="text-center card card-2">
           <Card.Body>
           <div className="card-title"><Card.Title>Deaths</Card.Title></div>
@@ -133,10 +142,10 @@ function App() {
         </Card >
         </Col>
 
-        <Col xs={4} md={4}>
+        <Col >
         <Card border="success" text="black" className="text-center card card-3">
           <Card.Body>
-          <div className="card-title"><Card.Title>Healed</Card.Title></div>
+          <div className="card-title"><Card.Title>Recovered</Card.Title></div>
             <Card.Text>
               {latest.recovered}
             </Card.Text>
@@ -148,7 +157,16 @@ function App() {
         </Col>
         </Row>
       </Container>
-    </CardDeck>
+          </CardDeck>
+          
+          <div style={{textAlign: "center"}} className="dark-theme">
+            <Toggle
+                  icons={false}
+                  onChange={handleDarkChange} />
+            
+            <span>Dark Theme</span>
+        </div>
+
     <Form>
       <Form.Group controlId="Search">
           <div className="search" id="search">Search Country</div>
@@ -166,7 +184,7 @@ function App() {
 
       <div id="map" style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "YOUR API KEY HERE" }}
+          bootstrapURLKeys={{ key: "AIzaSyCLlYUGFydCC-56n9Lv8LG6h3TkosnmE8M" }}
           defaultCenter={{
             lat:21, lng: 105.8
           }}
@@ -174,9 +192,11 @@ function App() {
         >
           {countriesLocation}
         </GoogleMapReact>
-      </div>
+          </div>
+          
+          <About id="about" style={{color: darkTheme ? "whilt" : "black"}}/>
 
-      <div className="footer">
+      <div className="footer" style={{color: darkTheme ? "white" : "white"}}>
         Copyright Tan D. Duong &copy; 2020
          
         <div class="icon">
@@ -199,10 +219,14 @@ function App() {
             <a href="https://www.instagram.com/tandduong/">
                 <i class="fab fa-instagram fa-2x"></i>
             </a>
-        </div>
+                  
+            <a href="#nav">
+                <i class="fas fa-arrow-up"></i>
+            </a>      
+        </div>      
       </div>
     </div>
   );
 }
 
-export default App;
+export default Home;
